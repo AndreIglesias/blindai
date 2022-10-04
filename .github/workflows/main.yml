@@ -274,6 +274,7 @@ jobs:
       - name: Login to cloud
         uses: docker/login-action@v1
         with:
+          registry: ${{ secrets.CLOUD_REPO }}
           username: ${{ secrets.CLOUD_PRIV_USR }}
           password: ${{ secrets.CLOUD_PRIV_PWD }}
 
