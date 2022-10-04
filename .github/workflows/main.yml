@@ -285,7 +285,7 @@ jobs:
           cd server
           make init
           DOCKER_BUILDKIT=1 docker build \
-            --target hardware \
+            --target hardware-cloud \
             -t ${{ secrets.CLOUD_REPO }}/blindai/blindai-server-cloud:latest \
             -f ./docker/build.dockerfile \
             .
